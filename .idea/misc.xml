@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/drawable-v24/box.xml" value="0.242" />
+        <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/drawable-v24/boxIcon.xml" value="0.242" />
+        <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.242" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.223" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/drawable/ic_baseline_vpn_key_24.xml" value="0.262" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout-v28/activity_main.xml" value="0.17432432432432432" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_home_screen.xml" value="0.17432432432432432" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_login_page.xml" value="0.2" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_main.xml" value="0.17432432432432432" />
-        <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_main2.xml" value="0.21077383497221033" />
+        <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_main2.xml" value="0.6" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_signuppage.xml" value="0.264" />
       </map>
     </option>

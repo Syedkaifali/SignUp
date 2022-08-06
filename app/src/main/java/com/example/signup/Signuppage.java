@@ -74,7 +74,7 @@ public class Signuppage extends AppCompatActivity {
                     return;
                 }
                 if(aadhar.length()<12) {
-                    mPassword.setError("Aadhar No must be greater than 12 digit");
+                    mAadhar.setError("Aadhar No must be greater than 12 digit");
                     return;
                 }
                 if (TextUtils.isEmpty(email)) {
@@ -86,7 +86,7 @@ public class Signuppage extends AppCompatActivity {
                     return;
                 }
                 if(mobile.length() != 10) {
-                    mPassword.setError("Mobile No must be of 10 digit");
+                    mMobile.setError("Mobile No must be of 10 digit");
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
@@ -110,7 +110,7 @@ public class Signuppage extends AppCompatActivity {
                             fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
-                                    Toast.makeText(getApplicationContext(), "Sign Up Sexfull", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Sign Up Successful", Toast.LENGTH_SHORT).show();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
