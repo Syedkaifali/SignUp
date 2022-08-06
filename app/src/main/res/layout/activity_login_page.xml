@@ -11,26 +11,27 @@
         android:id="@+id/login_head"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:text="@string/login1"
-        android:textStyle="bold"
         android:textColor="#CE062F6A"
         android:textSize="35sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        />
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:id="@+id/login_head2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Here"
+        android:layout_marginTop="4dp"
+        android:text="here"
         android:textColor="#CE062F6A"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:fontFamily="@font/poppins"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +48,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="@string/aadhar_number"
-        android:inputType="number"
+        android:inputType="text"
         android:minHeight="48dp"
         android:padding="10dp"
         android:textColor="#FFF"
@@ -57,9 +58,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_head2"
-
         app:layout_constraintVertical_bias="0.1399999"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        />
 
     <EditText
         android:id="@+id/login_password"
@@ -97,9 +98,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_password"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-<<<<<<<<< Temporary merge branch 1
-=========
+        tools:ignore="DuplicateSpeakableTextCheck"
+        android:elevation="100dp"
+        />
     <ProgressBar
         android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"
@@ -111,7 +112,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_button"
         app:layout_constraintVertical_bias="0.26" />
->>>>>>>>> Temporary merge branch 2
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
