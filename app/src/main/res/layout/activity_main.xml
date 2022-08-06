@@ -14,7 +14,7 @@
         android:fontFamily="@font/poppins"
         android:text="@string/welcome"
         android:textColor="#CE333435"
-        android:textSize="35sp"
+         android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
