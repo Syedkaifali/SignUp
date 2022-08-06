@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -24,7 +25,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
-import java.util.LongSummaryStatistics;
 import java.util.Map;
 import java.util.Objects;
 
@@ -53,7 +53,7 @@ public class Signuppage extends AppCompatActivity {
         fstore=FirebaseFirestore.getInstance();
 
         if(fAuth.getCurrentUser()!=null){
-            startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +74,7 @@ public class Signuppage extends AppCompatActivity {
                     return;
                 }
                 if(aadhar.length()<12) {
-                    mPassword.setError("Aadhar No must be greater than 12 digit");
+                    mAadhar.setError("Aadhar No must be greater than 12 digit");
                     return;
                 }
                 if (TextUtils.isEmpty(email)) {
@@ -86,7 +86,7 @@ public class Signuppage extends AppCompatActivity {
                     return;
                 }
                 if(mobile.length() != 10) {
-                    mPassword.setError("Mobile No must be of 10 digit");
+                    mMobile.setError("Mobile No must be of 10 digit");
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
@@ -110,7 +110,7 @@ public class Signuppage extends AppCompatActivity {
                             fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
-                                    Toast.makeText(getApplicationContext(), "Sign Up Sexfull", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Sign Up Successful", Toast.LENGTH_SHORT).show();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -139,7 +139,7 @@ public class Signuppage extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+                            startActivity(new Intent(getApplicationContext(),home_screen.class));
 
 
                         }
