@@ -41,7 +41,7 @@ private FirebaseAuth mFirebaseAuth;
     }
 
     private void openUpload() {
-        Intent intent = new Intent(this, upload.class);
+        Intent intent = new Intent(this, upd.class);
         startActivity(intent);
     }
 

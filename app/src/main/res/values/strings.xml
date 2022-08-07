@@ -16,5 +16,8 @@
     <string name="todo">TODO</string>
     <string name="logout">logout</string>
     <string name="scan">scan</string>
-    <string name="welcome_2">welcome!</string>
+    <string name="welcome_2">Welcome!</string>
+    <string name="uploadBtn" />
+    <string name="todod" />
+    <string name="upload_kar">Upload kar</string>
 </resources>
