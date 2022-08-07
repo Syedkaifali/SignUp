@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F8ECEC"
     android:layout_height="match_parent"
+    android:background="#F8ECEC"
     tools:context=".home_screen">
 
+
     <Button
-        android:id="@+id/logout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="71dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="56dp"
@@ -20,11 +20,82 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcome"
-        app:layout_constraintVertical_bias="0.356"
+        app:layout_constraintVertical_bias="0.845"
         tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="269dp"
+        android:layout_height="83dp"
+        android:backgroundTint="#CE062F6A"
+        android:text="@string/scan"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778" />
+
+    <ImageButton
+        android:id="@+id/beds"
+        android:layout_width="132dp"
+        android:layout_height="128dp"
+        android:background="@drawable/round_buttons"
+        android:src="@drawable/ic_baseline_king_bed_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313"
+        tools:ignore="SpeakableTextPresentCheck"
+         />
+
+    <ImageButton
+        android:id="@+id/qr_button"
+        android:layout_width="132dp"
+        android:layout_height="128dp"
+        android:background="@drawable/round_buttons"
+        android:src="@drawable/ic_baseline_qr_code_scanner_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/upload_reports"
+        android:layout_width="132dp"
+        android:layout_height="128dp"
+        android:background="@drawable/round_buttons"
+        android:src="@drawable/ic_baseline_cloud_upload_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/view_history"
+        android:layout_width="132dp"
+        android:layout_height="128dp"
+        android:background="@drawable/round_buttons"
+        android:src="@drawable/ic_baseline_history_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/welcome"
@@ -33,25 +104,28 @@
         android:fontFamily="@font/poppins"
         android:text="@string/welcome"
         android:textColor="#CE333435"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="230dp"
-        android:layout_height="83dp"
+        android:layout_width="178dp"
+        android:layout_height="34dp"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/logout"
+        app:layout_constraintBottom_toTopOf="@+id/scan_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome"
-        app:layout_constraintVertical_bias="0.252"
-        tools:text="abc@gmail.com" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="abc" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
