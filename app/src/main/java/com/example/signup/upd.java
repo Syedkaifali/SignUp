@@ -1,9 +1,5 @@
 package com.example.signup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
@@ -15,49 +11,49 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 public class upd extends AppCompatActivity {
-    //widgets
-    private Button uploadBtn;
+    private Button showAll;
     private ImageView imageView;
     private ProgressBar progressBar;
-    private DatabaseReference root = FirebaseDatabase.getInstance().getReference("Image ");
-    private StorageReference reference = FirebaseStorage.getInstance().getReference();
+    private final DatabaseReference root = FirebaseDatabase.getInstance().getReference("Image");
+    private final StorageReference reference = FirebaseStorage.getInstance().getReference();
     private Uri imageUri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upd);
 
-        uploadBtn = findViewById(R.id.uploadBtn);
+        //widgets
+        Button uploadBtn = findViewById(R.id.uploadBtn);
         progressBar = findViewById(R.id.progressBar3);
+        showAll = findViewById(R.id.showw);
         imageView = findViewById(R.id.imageView);
         progressBar.setVisibility(View.INVISIBLE);
-        imageView.setOnClickListener(new View.OnClickListener() {
+        showAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent galleryIntent = new Intent();
-                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-                galleryIntent.setType("image/*");
-                startActivityForResult(galleryIntent,2);
+                startActivity(new Intent(upd.this,show.class));
             }
         });
-        uploadBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (imageUri != null){
-                    uploadToFirebase(imageUri);
-                }else{
-                    Toast.makeText(upd.this, "Please Select Image", Toast.LENGTH_SHORT).show();
-                }
+        imageView.setOnClickListener(v -> {
+            Intent galleryIntent = new Intent();
+            galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+            galleryIntent.setType("image/*");
+            startActivityForResult(galleryIntent,2);
+        });
+        uploadBtn.setOnClickListener(v -> {
+            if (imageUri != null){
+                uploadToFirebase(imageUri);
+            }else{
+                Toast.makeText(upd.this, "Please Select Image", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -75,33 +71,19 @@ public class upd extends AppCompatActivity {
     private void uploadToFirebase(Uri uri){
 
         final StorageReference fileRef = reference.child(System.currentTimeMillis() + "." + getFileExtension(uri));
-        fileRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
+        fileRef.putFile(uri).addOnSuccessListener(taskSnapshot -> fileRef.getDownloadUrl().addOnSuccessListener(uri1 -> {
 
-                        Model model = new Model(uri.toString());
-                        String modelId = root.push().getKey();
-                        root.child(modelId).setValue(model);
-                        progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(upd.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
-                        imageView.setImageResource(R.drawable.ic_baseline_add_photo_alternate_24);
-                    }
-                });
+            Model model = new Model(uri1.toString());
+            String modelId = root.push().getKey();
+            if (modelId != null) {
+                root.child(modelId).setValue(model);
             }
-        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                progressBar.setVisibility(View.VISIBLE);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                progressBar.setVisibility(View.INVISIBLE);
-                Toast.makeText(upd.this, "Uploading Failed !!", Toast.LENGTH_SHORT).show();
-            }
+            progressBar.setVisibility(View.INVISIBLE);
+            Toast.makeText(upd.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+            imageView.setImageResource(R.drawable.ic_baseline_add_photo_alternate_24);
+        })).addOnProgressListener(snapshot -> progressBar.setVisibility(View.VISIBLE)).addOnFailureListener(e -> {
+            progressBar.setVisibility(View.INVISIBLE);
+            Toast.makeText(upd.this, "Uploading Failed !!", Toast.LENGTH_SHORT).show();
         });
     }
     private String getFileExtension(Uri mUri){

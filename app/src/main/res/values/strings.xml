@@ -19,5 +19,8 @@
     <string name="welcome_2">Welcome!</string>
     <string name="uploadBtn" />
     <string name="todod" />
-    <string name="upload_kar">Upload kar</string>
+    <string name="upload_kar">Upload</string>
+    <string name="Browse" />
+    <string name="browse">Browse</string>
+    <string name="show_all">Show All</string>
 </resources>

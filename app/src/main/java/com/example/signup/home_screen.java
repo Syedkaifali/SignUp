@@ -24,6 +24,8 @@ private FirebaseAuth mFirebaseAuth;
         button.setOnClickListener(view -> openlogin_page());
        ImageButton buttonUp = findViewById(R.id.upload_reports);
         buttonUp.setOnClickListener(view -> openUpload());
+        ImageButton buttonView = findViewById(R.id.view_history);
+        buttonView.setOnClickListener(view -> openHistory());
 
         scan_button= (Button) findViewById(R.id.scan_button);
         scan_button.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +35,11 @@ private FirebaseAuth mFirebaseAuth;
             }
         });
 
+    }
+
+    private void openHistory() {
+        Intent intent = new Intent(this, show.class);
+        startActivity(intent);
     }
 
     public void openscan_page(){

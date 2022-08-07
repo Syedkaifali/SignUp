@@ -16,6 +16,9 @@
         android:theme="@style/Theme.SignUp"
         tools:targetApi="31">
         <activity
+            android:name=".show"
+            android:exported="false" />
+        <activity
             android:name=".upd"
             android:exported="false" />
         <activity
