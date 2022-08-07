@@ -13,6 +13,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 private FirebaseAuth mFirebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ private FirebaseAuth mFirebaseAuth;
             startActivity(new Intent(this,home_screen.class));
         }
         else {
+
         }
     }
     public void openlogin_page(){
