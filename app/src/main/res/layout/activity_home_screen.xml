@@ -4,27 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8ECEC"
+    android:background="#dce0e8"
     tools:context=".home_screen">
 
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="133dp"
-        android:layout_height="71dp"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="56dp"
-        android:backgroundTint="#CE062F6A"
+        android:backgroundTint="#ff5258"
         android:padding="15dp"
         android:text="@string/logout"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcome"
-        app:layout_constraintVertical_bias="0.845"
+        app:layout_constraintVertical_bias="0.848"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
@@ -103,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="@string/welcome"
+        android:text="@string/welcome_2"
         android:textColor="#CE333435"
         android:textSize="40sp"
         android:textStyle="bold"

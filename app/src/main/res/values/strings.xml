@@ -16,4 +16,5 @@
     <string name="todo">TODO</string>
     <string name="logout">logout</string>
     <string name="scan">scan</string>
+    <string name="welcome_2">welcome!</string>
 </resources>
