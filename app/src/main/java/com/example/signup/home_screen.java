@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +22,8 @@ private FirebaseAuth mFirebaseAuth;
         mFirebaseAuth = FirebaseAuth.getInstance();
         Button button = findViewById(R.id.logout);
         button.setOnClickListener(view -> openlogin_page());
+       ImageButton buttonUp = findViewById(R.id.upload_reports);
+        buttonUp.setOnClickListener(view -> openUpload());
 
         scan_button= (Button) findViewById(R.id.scan_button);
         scan_button.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +37,11 @@ private FirebaseAuth mFirebaseAuth;
 
     public void openscan_page(){
         Intent intent = new Intent(this,scan_page.class);
+        startActivity(intent);
+    }
+
+    private void openUpload() {
+        Intent intent = new Intent(this, upload.class);
         startActivity(intent);
     }
 
