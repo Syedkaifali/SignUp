@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8ECEC"
+    android:background="#dce0e8"
     tools:context=".LoginPage">
+<!--    android:background="#F8ECEC"-->
 
     <TextView
         android:id="@+id/login_head"
