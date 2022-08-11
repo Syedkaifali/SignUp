@@ -7,6 +7,15 @@
     android:background="#dce0e8"
     tools:context=".home_screen">
 
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_menu_24" />
+
 
     <Button
         android:id="@+id/logout"

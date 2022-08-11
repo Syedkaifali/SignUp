@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,12 +14,17 @@ import com.google.firebase.auth.FirebaseAuth;
 public class home_screen extends AppCompatActivity {
 
     private Button scan_button;
+    Toolbar toolbar;
 
 private FirebaseAuth mFirebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        Toolbar toolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+
         mFirebaseAuth = FirebaseAuth.getInstance();
         Button button = findViewById(R.id.logout);
         button.setOnClickListener(view -> openlogin_page());
@@ -36,6 +42,8 @@ private FirebaseAuth mFirebaseAuth;
         });
 
     }
+
+
 
     private void openHistory() {
         Intent intent = new Intent(this, show.class);
