@@ -18,8 +18,11 @@ import java.util.ArrayList;
 public class show extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ArrayList<Model> list;
+
     private MyAdapter adapter;
+
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference("Image");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +33,17 @@ public class show extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<>();
-        adapter = new MyAdapter(this,list);
+        adapter = new MyAdapter(this , list);
         recyclerView.setAdapter(adapter);
+
         root.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot :snapshot.getChildren()){
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Model model = dataSnapshot.getValue(Model.class);
                     list.add(model);
                 }
+                ///
                 adapter.notifyDataSetChanged();
             }
 
@@ -47,7 +52,5 @@ public class show extends AppCompatActivity {
 
             }
         });
-
     }
-
 }
