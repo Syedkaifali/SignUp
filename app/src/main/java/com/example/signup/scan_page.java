@@ -1,6 +1,7 @@
 package com.example.signup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,9 @@ public class scan_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_page);
+        //Below API 29 (While Pasting the code delete this comment)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         scantext = (TextView)findViewById(R.id.scantext);
         scan_btn=(Button) findViewById(R.id.scan_qr);

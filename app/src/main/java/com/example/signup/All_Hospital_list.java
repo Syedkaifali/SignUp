@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,6 +46,7 @@ public class All_Hospital_list extends AppCompatActivity {
 //        adapter = new HospitalAdapter(arrayList);
 //        adapter.notifyDataSetChanged();
 //        listHospital.setAdapter(adapter,this);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         displayItem();
 
     }

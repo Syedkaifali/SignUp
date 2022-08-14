@@ -1,6 +1,7 @@
 package com.example.signup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.Manifest;
 import android.os.Bundle;
@@ -23,7 +24,9 @@ public class scannerView extends AppCompatActivity implements ZXingScannerView.R
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         scannerView= new ZXingScannerView(this);
+//Below API 29 (While Pasting the code delete this comment)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(scannerView);
 
         Dexter.withContext(getApplicationContext())

@@ -2,6 +2,7 @@ package com.example.signup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,7 +32,9 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+//Below API 29 (While Pasting the code delete this comment)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         mEmail = findViewById(R.id.login_id);
         mPassword = findViewById(R.id.login_password);
         progressBar = findViewById(R.id.progressBar2);

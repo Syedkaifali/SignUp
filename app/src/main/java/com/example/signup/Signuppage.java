@@ -2,6 +2,7 @@ package com.example.signup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -48,6 +49,9 @@ public class Signuppage extends AppCompatActivity {
         mRepassword = findViewById(R.id.confirmPassword);
         mRegisterButton = findViewById(R.id.signBtn);
         progressBar = findViewById(R.id.progressBar);
+        //Below API 29 (While Pasting the code delete this comment)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
