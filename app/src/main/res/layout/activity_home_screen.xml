@@ -23,137 +23,202 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#dce0e8">
+        android:background="#dce0e8"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="119dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="56dp"
-        android:backgroundTint="#ff5258"
-        android:padding="15dp"
-        android:text="@string/logout"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcome"
-        app:layout_constraintVertical_bias="0.848"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="119dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="56dp"
+            android:backgroundTint="#ff5258"
+            android:padding="15dp"
+            android:text="@string/logout"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcome"
+            app:layout_constraintVertical_bias="0.848"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <Button
-        android:id="@+id/scan_button"
-        android:layout_width="269dp"
-        android:layout_height="83dp"
-        android:backgroundTint="#CE062F6A"
-        android:text="@string/scan"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
 
-    <ImageButton
-        android:id="@+id/beds"
-        android:layout_width="132dp"
-        android:layout_height="128dp"
-        android:background="@drawable/box2"
-        android:src="@drawable/ic_baseline_king_bed_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.806"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313"
-        tools:ignore="SpeakableTextPresentCheck"
-         />
+        <Button
+            android:id="@+id/scan_button"
+            android:layout_width="269dp"
+            android:layout_height="83dp"
+            android:backgroundTint="#CE062F6A"
+            android:elevation="20dp"
+            android:text="@string/scan"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.778" />
 
-    <ImageButton
-        android:id="@+id/qr_button"
-        android:layout_width="132dp"
-        android:layout_height="128dp"
-        android:background="@drawable/box2"
-        android:src="@drawable/ic_baseline_qr_code_scanner_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/beds"
+            android:layout_width="132dp"
+            android:layout_height="128dp"
+            android:background="@drawable/box2"
+            android:src="@drawable/hospital3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.806"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.313"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/upload_reports"
-        android:layout_width="132dp"
-        android:layout_height="128dp"
-        android:background="@drawable/box2"
-        android:src="@drawable/ic_baseline_cloud_upload_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.806"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/qr_button"
+            android:layout_width="132dp"
+            android:layout_height="128dp"
+            android:background="@drawable/box2"
+            android:src="@drawable/qrcode"
 
-    <ImageButton
-        android:id="@+id/view_history"
-        android:layout_width="132dp"
-        android:layout_height="128dp"
-        android:background="@drawable/box2"
-        android:src="@drawable/ic_baseline_history_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575"
-        tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.179"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.313"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:text="@string/welcome_2"
-        android:textColor="#CE333435"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.226"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        <ImageButton
+            android:id="@+id/upload_reports"
+            android:layout_width="132dp"
+            android:layout_height="128dp"
+            android:background="@drawable/box2"
+            android:src="@drawable/uploadfile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.806"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.576"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="178dp"
-        android:layout_height="34dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/scan_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.214"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="abc" />
+        <ImageButton
+            android:id="@+id/view_history"
+            android:layout_width="132dp"
+            android:layout_height="128dp"
+            android:background="@drawable/box2"
+            android:src="@drawable/graph"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.179"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.575"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        <TextView
+            android:id="@+id/ViewVitals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:text="View Vitals"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/scan_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_history"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/Hospitalinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Hospitals"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/upload_reports"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.743"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beds"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <TextView
+            android:id="@+id/Qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Qr Generator"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/view_history"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.217"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qr_button"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <TextView
+            android:id="@+id/UploadReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Upload Report"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/scan_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.774"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_reports"
+            app:layout_constraintVertical_bias="0.406" />
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/welcome_2"
+            android:textColor="#CE333435"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.226"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.147" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="178dp"
+            android:layout_height="34dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/scan_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.214"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="abc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
+<!--            android:src="@drawable/ic_baseline_qr_code_scanner_24"-->
+<!--            android:src="@drawable/ic_baseline_grading_24"-->

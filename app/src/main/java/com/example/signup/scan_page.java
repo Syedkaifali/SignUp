@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class scan_page extends AppCompatActivity {
 
     Button scan_btn;
@@ -20,7 +22,13 @@ public class scan_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_page);
         //Below API 29 (While Pasting the code delete this comment)
-
+        LottieAnimationView v = findViewById(R.id.Lotty);
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),scannerView.class ));
+            }
+        });
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         scantext = (TextView)findViewById(R.id.scantext);
