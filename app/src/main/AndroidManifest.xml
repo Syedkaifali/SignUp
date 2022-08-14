@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
+        android:name=".G"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SignUp"
         tools:targetApi="31">
+        <activity
+            android:name=".All_Hospital_list"
+            android:exported="false" />
+        <activity
+            android:name=".Hhomescreen"
+            android:exported="false" />
         <activity
             android:name=".show"
             android:exported="false" />

@@ -51,7 +51,8 @@ private FirebaseAuth mFirebaseAuth;
         buttonUp.setOnClickListener(view -> openUpload());
         ImageButton buttonView = findViewById(R.id.view_history);
         buttonView.setOnClickListener(view -> openHistory());
-
+        ImageButton buttonB = findViewById(R.id.beds);
+        buttonB.setOnClickListener((view ->openHospital()));
         scan_button= (Button) findViewById(R.id.scan_button);
         scan_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +61,11 @@ private FirebaseAuth mFirebaseAuth;
             }
         });
 
+    }
+
+    private void openHospital() {
+        Intent intent = new Intent(this, Hhomescreen.class);
+        startActivity(intent);
     }
 
     @Override
