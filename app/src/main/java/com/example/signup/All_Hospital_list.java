@@ -2,9 +2,14 @@ package com.example.signup;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,6 +36,11 @@ public class All_Hospital_list extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_hospital_list);
+
+        Toolbar toolbar = findViewById(R.id.search_toolbar);
+        setSupportActionBar(toolbar);
+
+
         //ListView listHospital = findViewById(R.id.listHospital);
 //       RecyclerView listHospital = findViewById(R.id.listHospital);
 //       setAdapter(listHospital);
@@ -98,4 +108,28 @@ public class All_Hospital_list extends AppCompatActivity {
             return false;
         }
      }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                hospitalAdapter.getFilter().filter(newText);
+
+                return false;
+            }
+        });
+        return true;
+    }
 }

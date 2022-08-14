@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,7 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.signup.ModelH.StractHospital;
 import com.example.signup.R;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Locale;
 
 //public class HospitalAdapter extends ArrayAdapter<StractHospital>
 //
@@ -55,14 +60,16 @@ import java.util.List;
 //
 //    }
 //}
-public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHolder> {
+public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHolder> implements Filterable {
 
     private final Context context;
     private final List<StractHospital> modelPersonList;
+    private List<StractHospital> doctorsListAll;
 
     public HospitalAdapter(List<StractHospital> modelPersonList, Context context) {
         this.modelPersonList = modelPersonList;
         this.context = context;
+        doctorsListAll = new ArrayList<>(modelPersonList);
     }
 
     @NonNull
@@ -86,6 +93,61 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
     public int getItemCount() {
         return modelPersonList.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
+
+    private Filter filter = new Filter() {
+
+        // runs on background thread
+
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+
+//            List<StractHospital> filteredList = new ArrayList<>();
+//            if ( charSequence.toString().isEmpty()){
+//                filteredList.addAll(doctorsListAll);
+//            }else {
+//                for (StractHospital modelPersonList: doctorsListAll){
+//                    if(modelPersonList.toString().toLowerCase().contains(charSequence.toString().toLowerCase())){
+//                        filteredList.add(modelPersonList);
+//                    }
+//                }
+//            }
+//
+//            FilterResults filterResults = new FilterResults();
+//            filterResults.values = filteredList;
+
+            List<StractHospital> filteredList = new ArrayList<>();
+
+            if ( constraint == null || constraint.length() == 0){
+                filteredList.addAll(doctorsListAll);
+            }
+            else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (StractHospital item : doctorsListAll){
+                    if ( item.getHospitalName().toLowerCase().contains(filterPattern)){
+                        filteredList.add(item);
+                    }
+                }
+            }
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return  results;
+        }
+
+        // runs on ui thread
+        @Override
+        protected void publishResults(CharSequence constraints, FilterResults results) {
+            modelPersonList.clear();
+            modelPersonList.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 

@@ -28,4 +28,10 @@ public class StractHospital {
     public void setState(String state) {
         State = state;
     }
+
+    public boolean toLowerCase() {
+        return true;
+    }
+
+
 }
