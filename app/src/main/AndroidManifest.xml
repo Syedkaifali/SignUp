@@ -17,6 +17,12 @@
         android:theme="@style/Theme.SignUp"
         tools:targetApi="31">
         <activity
+            android:name=".States"
+            android:exported="false" />
+        <activity
+            android:name=".Vitals"
+            android:exported="false" />
+        <activity
             android:name=".All_Hospital_list"
             android:exported="false" />
         <activity

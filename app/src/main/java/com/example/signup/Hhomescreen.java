@@ -18,6 +18,13 @@ public class Hhomescreen extends AppCompatActivity {
         setContentView(R.layout.activity_hhomescreen);
         ImageButton buttonA = findViewById(R.id.all);
         buttonA.setOnClickListener(view -> openAll());
+        ImageButton buttonS = findViewById(R.id.state);
+        buttonS.setOnClickListener(view -> openState());
+    }
+
+    private void openState() {
+        Intent intent = new Intent(this, States.class);
+        startActivity(intent);
     }
 
     private void openAll() {

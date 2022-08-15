@@ -87,7 +87,7 @@ private FirebaseAuth mFirebaseAuth;
 
 
     private void openHistory() {
-        Intent intent = new Intent(this, show.class);
+        Intent intent = new Intent(this, Vitals.class);
         startActivity(intent);
     }
 
