@@ -17,6 +17,9 @@
         android:theme="@style/Theme.SignUp"
         tools:targetApi="31">
         <activity
+            android:name=".city"
+            android:exported="false" />
+        <activity
             android:name=".States"
             android:exported="false" />
         <activity

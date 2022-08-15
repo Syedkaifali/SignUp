@@ -4,6 +4,7 @@ public class StractHospital {
     public String HospitalName;
     public String State;
 
+
     public StractHospital(String hospitalName) {
         HospitalName = hospitalName;
     }
