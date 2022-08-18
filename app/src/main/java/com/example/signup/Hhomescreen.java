@@ -22,6 +22,13 @@ public class Hhomescreen extends AppCompatActivity {
         buttonS.setOnClickListener(view -> openState());
         ImageButton buttonC = findViewById(R.id.city);
         buttonC.setOnClickListener(view -> openCity());
+        ImageButton buttonB = findViewById(R.id.beds_avaliable);
+        buttonB.setOnClickListener(view-> openBeds());
+    }
+
+    private void openBeds() {
+        Intent intent = new Intent( this, beds_available.class);
+        startActivity( intent);
     }
 
     private void openCity() {

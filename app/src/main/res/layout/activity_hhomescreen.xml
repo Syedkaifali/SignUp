@@ -37,7 +37,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/upload_reports"
+        android:id="@+id/beds_avaliable"
         android:layout_width="132dp"
         android:layout_height="128dp"
         android:background="@drawable/box2"
