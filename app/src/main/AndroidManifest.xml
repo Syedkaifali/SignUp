@@ -4,6 +4,7 @@
     package="com.example.signup">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".G"
@@ -16,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SignUp"
         tools:targetApi="31">
+        <activity
+            android:name=".meds_home"
+            android:exported="false" />
         <activity
             android:name=".CityToHospital"
             android:exported="false" />

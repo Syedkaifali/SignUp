@@ -53,6 +53,8 @@ private FirebaseAuth mFirebaseAuth;
         mFirebaseAuth = FirebaseAuth.getInstance();
         Button button = findViewById(R.id.logout);
         button.setOnClickListener(view -> openlogin_page());
+        ImageButton buttonMeds = findViewById(R.id.qr_button);
+        buttonMeds.setOnClickListener(view -> openMeds_Home());
        ImageButton buttonUp = findViewById(R.id.upload_reports);
         buttonUp.setOnClickListener(view -> openUpload());
         ImageButton buttonView = findViewById(R.id.view_history);
@@ -85,6 +87,10 @@ private FirebaseAuth mFirebaseAuth;
         }
     }
 
+    private void openMeds_Home(){
+        Intent intent = new Intent(this, meds_home.class);
+        startActivity(intent);
+    }
 
     private void openHistory() {
         Intent intent = new Intent(this, Vitals.class);
