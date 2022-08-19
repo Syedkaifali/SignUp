@@ -1,16 +1,16 @@
 package com.example.signup;
 
 import android.content.Context;
-//import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.TextView;
-
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import io.reactivex.rxjava3.annotations.NonNull;
 
@@ -18,10 +18,12 @@ public class bedsAdapter extends RecyclerView.Adapter<bedsAdapter.ExampleViewHol
 
     private Context mContext;
     private ArrayList<bedsItem> mExampleList;
+    private List<bedsItem> doctorsListAll;
 
     public bedsAdapter(Context context, ArrayList<bedsItem> exampleList) {
         mContext = context;
         mExampleList = exampleList;
+        doctorsListAll = new ArrayList<>(exampleList);
     }
 
     @NonNull
@@ -62,6 +64,44 @@ public class bedsAdapter extends RecyclerView.Adapter<bedsAdapter.ExampleViewHol
     public int getItemCount() {
         return mExampleList.size();
     }
+    public Filter getFilter() {
+        return filter;
+    }
+
+    private Filter filter = new Filter() {
+
+        // runs on background thread
+
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+
+            List<bedsItem> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(doctorsListAll);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (bedsItem item : doctorsListAll) {
+                    if (item.getState().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            mExampleList.clear();
+            mExampleList.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
+
 
     public class ExampleViewHolder extends RecyclerView.ViewHolder {
 

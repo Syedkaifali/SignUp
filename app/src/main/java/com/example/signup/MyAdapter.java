@@ -41,6 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         Glide.with(context).load(mList.get(position).getImageUrl()).into(holder.imageView);
     }
 
+
     @Override
     public int getItemCount() {
         return mList.size();
@@ -53,6 +54,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.cardImg1);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
+
     }
+
 }

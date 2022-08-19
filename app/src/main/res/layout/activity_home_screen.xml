@@ -55,7 +55,6 @@
             tools:ignore="DuplicateSpeakableTextCheck" />
 
 
-
         <Button
             android:id="@+id/scan_button"
             android:layout_width="269dp"
@@ -68,7 +67,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.778" />
+            app:layout_constraintVertical_bias="0.804" />
 
         <ImageButton
             android:id="@+id/beds"
@@ -89,7 +88,7 @@
             android:layout_width="132dp"
             android:layout_height="128dp"
             android:background="@drawable/box2"
-            android:src="@drawable/qrcode"
+            android:src="@drawable/capsule"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -167,7 +166,7 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/view_history"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.217"
+            app:layout_constraintHorizontal_bias="0.242"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/qr_button"
             app:layout_constraintVertical_bias="0.4" />
