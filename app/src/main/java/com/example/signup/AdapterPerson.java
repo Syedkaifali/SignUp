@@ -1,10 +1,10 @@
 package com.example.signup;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,6 +63,9 @@ public class AdapterPerson extends RecyclerView.Adapter<AdapterPerson.ViewHolder
         public void onClick(View v) {
             ModelPerson modelPerson = modelPersonList.get(getAdapterPosition());
             Toast.makeText(context, modelPerson.getPersonName(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(context,StateOn.class);
+            intent.putExtra("Name",modelPerson.getPersonName());
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         }
     }
 }

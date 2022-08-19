@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
 import com.example.signup.G;
 import com.example.signup.ModelH.StractHospital;
 
@@ -18,7 +17,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static String DBLOCATION = "/data/data/" + G.context.getPackageName() + "/databases" + "/";
     private Context mContext;
     private SQLiteDatabase mDatabase;
-    private SQLiteDatabase cDatabase;
 
     public DatabaseHelper(Context context, String DBname) {
         super(context, DBNAME, null, 1);
@@ -61,8 +59,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         StractHospital stractHospital = null;
         ArrayList<StractHospital> arrayListHospital = new ArrayList<StractHospital>();
         OpenDatabase();
-        Cursor cursor = mDatabase.rawQuery("select * from " + TABLE, null);
+        Cursor cursor = mDatabase.rawQuery("select * from " + TABLE ,  null);
         cursor.moveToFirst();
+      //  String[] columnNames = new String[] {HospitalID, Latitude, Longitude, Location, HospitalName, HospitalType,HospitalCareType,Address,State,District,Pincode,Telephone,Mobile,EmergencyNumber,AmbulancePhoneNumber,BloodBankPhoneNumber,Tollfree,Helpline,Fax,Email1,Email2,Website,Speciality,IsFavourite};
+      //  String whereClause = "State=Bhopal";
+
+        //return mDb.query(DATABASE_TABLE_TIMETABLE, columnNames, whereClause, null, null, null, null);
         while (!cursor.isAfterLast()) {
             stractHospital = new StractHospital(cursor.getString(4));
             arrayListHospital.add(stractHospital);
