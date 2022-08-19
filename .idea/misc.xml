@@ -38,6 +38,7 @@
         <entry key="app/src/main/res/drawable/wave1.xml" value="0.2245" />
         <entry key="app/src/main/res/drawable/wave2.xml" value="0.2245" />
         <entry key="app/src/main/res/layout/activity_all_hospital_list.xml" value="0.16216216216216217" />
+        <entry key="app/src/main/res/layout/activity_beds_home.xml" value="0.16317567567567567" />
         <entry key="app/src/main/res/layout/activity_hhomescreen.xml" value="0.16216216216216217" />
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.17535858154296874" />
         <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.16216216216216217" />
@@ -49,6 +50,7 @@
         <entry key="app/src/main/res/layout/activity_show.xml" value="0.16216216216216217" />
         <entry key="app/src/main/res/layout/activity_signuppage.xml" value="0.16216216216216217" />
         <entry key="app/src/main/res/layout/activity_upd.xml" value="0.16216216216216217" />
+        <entry key="app/src/main/res/layout/beds_item.xml" value="0.1625" />
         <entry key="app/src/main/res/layout/header.xml" value="0.16148648648648647" />
         <entry key="app/src/main/res/layout/meds_item.xml" value="0.1625" />
         <entry key="app/src/main/res/layout/recorditem.xml" value="0.16216216216216217" />
