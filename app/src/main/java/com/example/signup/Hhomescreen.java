@@ -27,7 +27,7 @@ public class Hhomescreen extends AppCompatActivity {
     }
 
     private void openBeds() {
-        Intent intent = new Intent( this, beds_available.class);
+        Intent intent = new Intent( this, beds_home.class);
         startActivity( intent);
     }
 
