@@ -1,15 +1,30 @@
 package com.example.signup;
 
-
-import com.google.firebase.database.IgnoreExtraProperties;
-
-@IgnoreExtraProperties
 public class User {
     private String date;
+
+
     private String bp;
     private String notes;
 
-    public User() {
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setBp(String bp) {
+        this.bp = bp;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public User(String date) {
+        this.date = date;
+    }
+    public User(String date, String bp) {
+        this.date = date;
+        this.bp = bp;
     }
 
     public User(String date, String bp, String notes) {
@@ -30,3 +45,4 @@ public class User {
         return notes;
     }
 }
+

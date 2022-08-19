@@ -11,25 +11,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class BpAdapter extends RecyclerView.Adapter<BpAdapter.MyViewHolder> {
+public class KHOONADAPTER extends RecyclerView.Adapter<BpAdapter.MyViewHolder> {
     Context context;
-    ArrayList<User> list;
+    ArrayList<KHOONUSER> list;
 
-    public BpAdapter(Context context, ArrayList<User> list) {
+    public KHOONADAPTER(Context context, ArrayList<KHOONUSER> list) {
         this.context = context;
         this.list = list;
     }
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BpAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.khoonitem,parent,false);
-        return new MyViewHolder(v);
+        return new BpAdapter.MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        User user = list.get(position);
+    public void onBindViewHolder(@NonNull BpAdapter.MyViewHolder holder, int position) {
+        KHOONUSER user = list.get(position);
         holder.date.setText(user.getDate());
         holder.bp.setText(user.getBp());
         holder.notes.setText(user.getNotes());

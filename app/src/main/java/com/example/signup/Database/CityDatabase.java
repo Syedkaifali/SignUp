@@ -19,7 +19,7 @@ public class CityDatabase extends SQLiteOpenHelper {
     public static String DBLOCATION = "/data/data/" + G.context.getPackageName() + "/databases"+"/" ;
     private Context mContext;
     private SQLiteDatabase mDatabase;
-
+    private String where;
     public CityDatabase(Context context, String DBname){
         super(context,DBNAME,null,1);
         DBNAME = DBname + ".db";
@@ -77,6 +77,34 @@ public class CityDatabase extends SQLiteOpenHelper {
 
         return newList;
     }
+
+    public ArrayList<StractCity> GetCityFromState(String name) {
+        String a = name;
+        String[] columns = {CITY};
+        StractCity stractCity = null;
+        ArrayList<StractCity> arrayListHospital = new ArrayList<StractCity>();
+        // SELECT DISTINCT District FROM MST_Hospital
+        OpenDatabase();
+// SELECT * FROM MST_Hospital WHERE State = 'Gujarat'
+//        Cursor cursor = mDatabase.rawQuery( "select * from " + TABLE , null);
+           //Cursor cursor = mDatabase.rawQuery( "SELECT * FROM MST_Hospital WHERE State = " + "Goa" , null);
+      //  Cursor cursor = mDatabase.query(true, TABLE,null, null, null, CITY, null, null, null);
+       Cursor cursor = mDatabase.rawQuery("select distinct * from " + TABLE + " where State =? group by " + CITY , new String[]{name});
+       // Cursor cursor = mDatabase.query(true, TABLE,columns, STATE, new String[]{name}, CITY, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            stractCity = new StractCity(cursor.getString(9));
+            arrayListHospital.add(stractCity);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        CloseDatabase();
+        ArrayList<StractCity> newList = removeDuplicates(arrayListHospital);
+
+        return newList;
+    }
+
+
     public ArrayList<StractState> Getstatee() {
 
         StractState stractState = null;
@@ -112,6 +140,8 @@ public class CityDatabase extends SQLiteOpenHelper {
 
         return newList;
     }
+
+
     private ArrayList<StractState> removeDuplicatess(ArrayList<StractState> arrayListHospital) {
         ArrayList<StractState> newList = new ArrayList<StractState>();
         for (StractState element : arrayListHospital) {

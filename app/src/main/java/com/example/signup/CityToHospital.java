@@ -41,7 +41,7 @@ public class CityToHospital extends AppCompatActivity {
         //textView = findViewById(R.id.kc);
        // textView.setText(getIntent().getStringExtra("City"));
         Intent intent = getIntent();
-        String abc = intent.getStringExtra("CIty");
+        String abc = intent.getStringExtra("City");
         displayItem(abc);
 
 
@@ -67,10 +67,6 @@ public class CityToHospital extends AppCompatActivity {
         recyclerView.setAdapter(c2Hadapter);
 
     }
-
-//    private void setAdapter(RecyclerView listHospital) {
-//
-//    }
 
     public Boolean copydatabase(Context context) {
 

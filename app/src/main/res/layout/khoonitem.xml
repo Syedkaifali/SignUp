@@ -3,95 +3,91 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation= "12dp"
-    app:cardCornerRadius="12dp"
-    android:layout_margin="16dp"
-    >
+    app:cardElevation="8dp"
+
+    app:cardCornerRadius="8dp"
+    android:layout_margin="16dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:orientation="vertical"
-        >
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center_vertical"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date :"
-                android:textSize="24dp"
+                android:text="Date:"
                 android:textColor="@color/black"
-                />
+                android:textSize="26sp"
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/textdate"
+                android:id="@+id/DATE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24dp"
+                android:layout_marginLeft="8dp"
+                android:text="Arya"
                 android:textColor="@color/black"
-                />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center_vertical"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BP :"
-                android:textSize="24dp"
+                android:text="Blood Pressure :"
                 android:textColor="@color/black"
-                />
+                android:textSize="26sp"
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/textbp"
+                android:id="@+id/BLOODPR"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24dp"
+                android:layout_marginLeft="8dp"
+                android:text="Stark"
                 android:textColor="@color/black"
-                />
+                android:textSize="20sp" />
 
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center_vertical"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Notes :"
-                android:textSize="24dp"
                 android:textColor="@color/black"
-                />
+                android:textSize="26sp"
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/textnotes"
+                android:id="@+id/NOTES"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24dp"
+                android:layout_marginLeft="8dp"
+                android:text="18"
                 android:textColor="@color/black"
-                />
+                android:textSize="20sp" />
 
         </LinearLayout>
-
-
 
 
 

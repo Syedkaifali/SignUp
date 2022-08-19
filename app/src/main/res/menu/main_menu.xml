@@ -10,22 +10,22 @@
         <item
             android:id="@+id/nav_upload"
             android:title="Upload"
-            android:icon="@drawable/cloud_upload"/>
+            android:icon="@drawable/uploadfile"/>
 
         <item
             android:id="@+id/nav_scan"
             android:title="doctors"
-            android:icon="@drawable/ic_baseline_qr_code_scanner_24"/>
+            android:icon="@drawable/qrcode"/>
 
         <item
             android:id="@+id/nav_beds"
             android:title="Beds"
-            android:icon="@drawable/ic_baseline_king_bed_24"/>
+            android:icon="@drawable/hospitalbed"/>
 
         <item
             android:id="@+id/nav_logout"
             android:title="@string/logout"
-            android:icon="@drawable/ic_baseline_home_24"/>
+            android:icon="@drawable/location"/>
 
     </group>
 

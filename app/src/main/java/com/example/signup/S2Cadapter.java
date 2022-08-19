@@ -13,18 +13,19 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.signup.ModelH.C2HM;
+import com.example.signup.ModelH.StractCity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class C2Hadapter extends RecyclerView.Adapter<com.example.signup.C2Hadapter.ViewHolder> implements Filterable {
+public class S2Cadapter extends RecyclerView.Adapter<com.example.signup.S2Cadapter.ViewHolder> implements Filterable {
+
 
     private final Context context;
-    private final List<C2HM> modelPersonList;
-    private List<C2HM> doctorsListAll;
+    private final List<StractCity> modelPersonList;
+    private List<StractCity> doctorsListAll;
 
-    public C2Hadapter(List<C2HM> modelPersonList, Context context) {
+    public S2Cadapter(List<StractCity> modelPersonList, Context context) {
         this.modelPersonList = modelPersonList;
         this.context = context;
         doctorsListAll = new ArrayList<>(modelPersonList);
@@ -32,22 +33,24 @@ public class C2Hadapter extends RecyclerView.Adapter<com.example.signup.C2Hadapt
 
     @NonNull
     @Override
-    public com.example.signup.C2Hadapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.recorditem, parent, false);
-        return new com.example.signup.C2Hadapter.ViewHolder(itemView);
+    public com.example.signup.S2Cadapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cityitem, parent, false);
+        return new com.example.signup.S2Cadapter.ViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull com.example.signup.C2Hadapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull com.example.signup.S2Cadapter.ViewHolder holder, int position) {
 
-        C2HM modelPerson = modelPersonList.get(position);
-        holder.tvName.setText(modelPerson.getHosc());
+        StractCity modelPerson = modelPersonList.get(position);
+        holder.tvName.setText(modelPerson.getCity());
+
     }
 
     @Override
     public int getItemCount() {
         return modelPersonList.size();
     }
+
 
     @Override
     public Filter getFilter() {
@@ -61,16 +64,15 @@ public class C2Hadapter extends RecyclerView.Adapter<com.example.signup.C2Hadapt
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
 
-
-            List<C2HM> filteredList = new ArrayList<>();
+            List<StractCity> filteredList = new ArrayList<>();
 
             if (constraint == null || constraint.length() == 0) {
                 filteredList.addAll(doctorsListAll);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
-                for (C2HM item : doctorsListAll) {
-                    if (item.getHosc().toLowerCase().contains(filterPattern)) {
+                for (StractCity item : doctorsListAll) {
+                    if (item.getCity().toLowerCase().contains(filterPattern)) {
                         filteredList.add(item);
                     }
                 }
@@ -94,22 +96,21 @@ public class C2Hadapter extends RecyclerView.Adapter<com.example.signup.C2Hadapt
 
         private final TextView tvName;
 
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tvName = itemView.findViewById(R.id.aspName);
+            tvName = itemView.findViewById(R.id.aspCity);
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-            C2HM modelPerson = modelPersonList.get(getAdapterPosition());
-        Intent intent = new Intent(context,FinalHospital.class);
-        intent.putExtra("Hospital",modelPerson.getHosc());
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-            Toast.makeText(context, modelPerson.getHosc(), Toast.LENGTH_SHORT).show();
+            StractCity modelPerson = modelPersonList.get(getAdapterPosition());
+            Intent intent = new Intent(context, CityToHospital.class);
+            intent.putExtra("City", modelPerson.getCity());
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+            Toast.makeText(context, modelPerson.getCity(), Toast.LENGTH_SHORT).show();
         }
     }
 }

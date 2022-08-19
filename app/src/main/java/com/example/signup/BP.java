@@ -44,7 +44,7 @@ public class BP extends AppCompatActivity {
         btnView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity( new Intent(BP.this,Userlist.class));
+                startActivity( new Intent(BP.this,KHOON.class));
                 finish();
             }
         });

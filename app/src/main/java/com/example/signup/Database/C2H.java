@@ -61,7 +61,12 @@ public class C2H extends SQLiteOpenHelper {
         OpenDatabase();
         //    String query = "Select HospitalID from MST_Hospital Where State = ("Andhra Pradesh")
 //        Cursor cursor = mDatabase.rawQuery( "select * from " + TABLE , null);
-        Cursor cursor = mDatabase.rawQuery(" Select HospitalName from MST_Hospital Where District = 'xyz' " ,null);
+       // Cursor cursor = mDatabase.rawQuery(" Select HospitalName from MST_Hospital Where District = 'xyz' " ,null);
+       // Cursor cursor = mDatabase.rawQuery("select * from " + TABLE + " where " + CITY + " = ? " , new String[]{xyz});
+
+       // Cursor cursor = mDatabase.rawQuery("select distinct * from " + TABLE + " where State =? group by " + CITY , new String[]{xyz});
+
+        Cursor cursor = mDatabase.rawQuery("select * from " + TABLE + " where District = ?",  new String[]{xyz});
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
            C2HM = new C2HM(cursor.getString(4));

@@ -25,13 +25,4 @@
 
 
 </RelativeLayout>
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/listCiity"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_marginTop="60dp"-->
-<!--        android:scrollbars="vertical"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+

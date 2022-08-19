@@ -1,6 +1,7 @@
 package com.example.signup.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +13,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+import com.example.signup.FinalHospital;
 import com.example.signup.ModelH.StractHospital;
 import com.example.signup.R;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Locale;
 
 //public class HospitalAdapter extends ArrayAdapter<StractHospital>
 //
@@ -167,6 +166,10 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
         @Override
         public void onClick(View v) {
             StractHospital modelPerson = modelPersonList.get(getAdapterPosition());
+            Intent intent = new Intent(context, FinalHospital.class);
+            intent.putExtra("Hospital",modelPerson.getHospitalName());
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
             Toast.makeText(context, modelPerson.getHospitalName(), Toast.LENGTH_SHORT).show();
         }
     }
