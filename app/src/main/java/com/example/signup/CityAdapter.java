@@ -1,6 +1,7 @@
 package com.example.signup;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -125,6 +126,10 @@ public class CityAdapter extends RecyclerView.Adapter<com.example.signup.CityAda
         @Override
         public void onClick(View v) {
             StractCity modelPerson = modelPersonList.get(getAdapterPosition());
+            Intent intent = new Intent(context,CityToHospital.class);
+            intent.putExtra("City",modelPerson.getCity());
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
             Toast.makeText(context, modelPerson.getCity(), Toast.LENGTH_SHORT).show();
         }
     }

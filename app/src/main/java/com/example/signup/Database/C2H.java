@@ -6,11 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.signup.G;
-import com.example.signup.ModelH.StractCity;
+import com.example.signup.ModelH.C2HM;
 
 import java.util.ArrayList;
 
-public class CityDatabase extends SQLiteOpenHelper {
+public class C2H extends SQLiteOpenHelper {
     public static String DBNAME;
     public static String TABLE;
     public static String CITY;
@@ -18,7 +18,7 @@ public class CityDatabase extends SQLiteOpenHelper {
     private Context mContext;
     private SQLiteDatabase mDatabase;
 
-    public CityDatabase(Context context, String DBname){
+    public C2H(Context context, String DBname){
         super(context,DBNAME,null,1);
         DBNAME = DBname + ".db";
         TABLE = "MST_Hospital" ;
@@ -53,32 +53,32 @@ public class CityDatabase extends SQLiteOpenHelper {
         }
         //Get record
     }
-    public ArrayList<StractCity> GetCiity() {
+    public ArrayList<C2HM> Gethosc(String xyz) {
 
-        StractCity stractCity = null;
-        ArrayList<StractCity> arrayListHospital = new ArrayList<StractCity>();
+        C2HM C2HM = null;
+        ArrayList<C2HM> arrayListHospital = new ArrayList<C2HM>();
         // SELECT DISTINCT District FROM MST_Hospital
         OpenDatabase();
-
+        //    String query = "Select HospitalID from MST_Hospital Where State = ("Andhra Pradesh")
 //        Cursor cursor = mDatabase.rawQuery( "select * from " + TABLE , null);
-        Cursor cursor = mDatabase.query(true, TABLE,null, null, null, CITY, null, null, null);
+        Cursor cursor = mDatabase.rawQuery(" Select HospitalName from MST_Hospital Where District = 'xyz' " ,null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            stractCity = new StractCity(cursor.getString(9));
-            arrayListHospital.add(stractCity);
+           C2HM = new C2HM(cursor.getString(4));
+            arrayListHospital.add(C2HM);
             cursor.moveToNext();
         }
         cursor.close();
         CloseDatabase();
-        ArrayList<StractCity> newList = removeDuplicates(arrayListHospital);
+        ArrayList<C2HM> newList = removeDuplicates(arrayListHospital);
 
         return newList;
     }
 
 
-    private ArrayList<StractCity> removeDuplicates(ArrayList<StractCity> arrayListHospital) {
-        ArrayList<StractCity> newList = new ArrayList<StractCity>();
-        for (StractCity element : arrayListHospital) {
+    private ArrayList<C2HM> removeDuplicates(ArrayList<C2HM> arrayListHospital) {
+        ArrayList<C2HM> newList = new ArrayList<C2HM>();
+        for (C2HM element : arrayListHospital) {
 
             if (!newList.contains(element)) {
 
@@ -90,4 +90,5 @@ public class CityDatabase extends SQLiteOpenHelper {
     }
 
 }
+
 

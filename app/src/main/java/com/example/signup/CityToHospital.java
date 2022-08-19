@@ -1,6 +1,7 @@
 package com.example.signup;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,52 +14,57 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.signup.Database.C2H;
 import com.example.signup.Database.CityDatabase;
-import com.example.signup.ModelH.StractCity;
+import com.example.signup.ModelH.C2HM;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.List;
+import java.util.ArrayList;
 
-public class city extends AppCompatActivity {
+public class CityToHospital extends AppCompatActivity {
     RecyclerView recyclerView;
-    List<StractCity> myList;
-    CityAdapter cityAdapter;
+    ArrayList<C2HM> myList;
+    C2Hadapter c2Hadapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_city);
+        setContentView(R.layout.activity_city_to_hospital);
         Toolbar toolbar = findViewById(R.id.search_toolbar);
         setSupportActionBar(toolbar);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        displayItem();
+        //textView = findViewById(R.id.kc);
+       // textView.setText(getIntent().getStringExtra("City"));
+        Intent intent = getIntent();
+        String abc = intent.getStringExtra("CIty");
+        displayItem(abc);
 
 
     }
-
-    private void displayItem() {
-        recyclerView = (RecyclerView) findViewById(R.id.listCity);
+    private void displayItem(String abc) {
+        recyclerView = (RecyclerView) findViewById(R.id.liistCity);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        CityDatabase mDBHELPER = new CityDatabase(city.this, "Hospital");
-        File database = getApplicationContext().getDatabasePath(CityDatabase.DBNAME);
+        C2H mDBHELPER = new C2H(CityToHospital.this, "Hospital");
+        File database = getApplicationContext().getDatabasePath(C2H.DBNAME);
         if (!database.exists()) {
             mDBHELPER.getReadableDatabase();
             if (!database.exists()) {
                 mDBHELPER.getReadableDatabase();
-                if (!copydatabase(city.this)) {
+                if (!copydatabase(CityToHospital.this)) {
                     return;
                 }
             }
         }
-        myList = mDBHELPER.GetCiity();
-        cityAdapter=new CityAdapter(myList,this);
-        cityAdapter.notifyDataSetChanged();
-        recyclerView.setAdapter(cityAdapter);
+        myList = mDBHELPER.Gethosc(abc);
+        c2Hadapter=new C2Hadapter(myList,this);
+        c2Hadapter.notifyDataSetChanged();
+        recyclerView.setAdapter(c2Hadapter);
 
     }
 
@@ -104,7 +110,7 @@ public class city extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                cityAdapter.getFilter().filter(newText);
+                c2Hadapter.getFilter().filter(newText);
 
                 return false;
             }
@@ -112,3 +118,6 @@ public class city extends AppCompatActivity {
         return true;
     }
 }
+
+
+

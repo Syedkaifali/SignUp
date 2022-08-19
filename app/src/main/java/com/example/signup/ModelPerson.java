@@ -6,9 +6,7 @@ public class ModelPerson {
 
     public ModelPerson(String personName) {
         this.personName = personName;
-//        this.personEmail = personEmail;
-//        this.personProfile = personProfile;
-   //     , String personEmail, int personProfile
+
     }
 
 
