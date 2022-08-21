@@ -36,7 +36,7 @@ public class meds_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meds_home);
-        Toolbar toolbar = findViewById(R.id.search_toolbar);
+        Toolbar toolbar = findViewById(R.id.search_toolbarMH);
         setSupportActionBar(toolbar);
 
         mRecyclerView = findViewById(R.id.recycler_view);

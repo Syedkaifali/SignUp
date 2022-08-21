@@ -9,14 +9,12 @@ import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -51,8 +49,8 @@ private FirebaseAuth mFirebaseAuth;
         navigationView.setNavigationItemSelectedListener(this);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
-        Button button = findViewById(R.id.logout);
-        button.setOnClickListener(view -> openlogin_page());
+//        Button button = findViewById(R.id.logout);
+//        button.setOnClickListener(view -> openlogin_page());
         ImageButton buttonMeds = findViewById(R.id.qr_button);
         buttonMeds.setOnClickListener(view -> openMeds_Home());
        ImageButton buttonUp = findViewById(R.id.upload_reports);
@@ -107,11 +105,11 @@ private FirebaseAuth mFirebaseAuth;
         startActivity(intent);
     }
 
-    private void openlogin_page() {
-    mFirebaseAuth.signOut();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
+//    private void openlogin_page() {
+//    mFirebaseAuth.signOut();
+//        Intent intent = new Intent(this, MainActivity.class);
+//        startActivity(intent);
+//    }
 
 
     @Override

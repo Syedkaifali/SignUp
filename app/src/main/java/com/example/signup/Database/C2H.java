@@ -69,7 +69,7 @@ public class C2H extends SQLiteOpenHelper {
         Cursor cursor = mDatabase.rawQuery("select * from " + TABLE + " where District = ?",  new String[]{xyz});
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-           C2HM = new C2HM(cursor.getString(4));
+           C2HM = new C2HM(cursor.getString(4),cursor.getString(0));
             arrayListHospital.add(C2HM);
             cursor.moveToNext();
         }

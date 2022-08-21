@@ -66,7 +66,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         //return mDb.query(DATABASE_TABLE_TIMETABLE, columnNames, whereClause, null, null, null, null);
         while (!cursor.isAfterLast()) {
-            stractHospital = new StractHospital(cursor.getString(4));
+            stractHospital = new StractHospital(cursor.getString(4),cursor.getString(0));
+//            StractHospital model = new StractHospital();
+//            model.HospitalName = cursor.getString(4);
+//           // model.State = cursor.getString(0);
             arrayListHospital.add(stractHospital);
             cursor.moveToNext();
         }

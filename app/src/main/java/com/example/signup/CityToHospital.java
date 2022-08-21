@@ -35,7 +35,7 @@ public class CityToHospital extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city_to_hospital);
-        Toolbar toolbar = findViewById(R.id.search_toolbar);
+        Toolbar toolbar = findViewById(R.id.search_toolbarCH);
         setSupportActionBar(toolbar);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         //textView = findViewById(R.id.kc);

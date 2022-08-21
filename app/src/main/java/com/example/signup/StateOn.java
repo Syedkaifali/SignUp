@@ -32,7 +32,7 @@ public class StateOn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_state_on);
-        Toolbar toolbar = findViewById(R.id.search_toolbar);
+        Toolbar toolbar = findViewById(R.id.search_toolbarSO);
         setSupportActionBar(toolbar);
         Intent intent = getIntent();
         String abc= intent.getStringExtra("City");

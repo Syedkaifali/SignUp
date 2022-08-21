@@ -35,7 +35,7 @@ public class beds_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beds_home);
-        Toolbar toolbar = findViewById(R.id.search_toolbar);
+        Toolbar toolbar = findViewById(R.id.search_toolbarB);
         setSupportActionBar(toolbar);
 
         mRecyclerView = findViewById(R.id.recycler_view);

@@ -8,7 +8,7 @@
     tools:context=".States"
     android:orientation="vertical">
     <include
-        android:id="@+id/search_toolbar"
+        android:id="@+id/search_toolbarS"
         layout="@layout/search_toolbar" />
 
 

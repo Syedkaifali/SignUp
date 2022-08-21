@@ -37,7 +37,7 @@ public class All_Hospital_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_hospital_list);
 
-        Toolbar toolbar = findViewById(R.id.search_toolbar);
+        Toolbar toolbar = findViewById(R.id.search_toolbarAH);
         setSupportActionBar(toolbar);
 
 

@@ -83,6 +83,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
 
         StractHospital modelPerson = modelPersonList.get(position);
         holder.tvName.setText(modelPerson.getHospitalName());
+       // holder.id.setText(modelPerson.getState());
         //holder.tvEmail.setText(modelPerson.getPersonEmail());
         //Picasso.get().load(modelPerson.getPersonProfile()).into(holder.ivPersonImage);
 
@@ -150,7 +151,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private final TextView tvName;
+        private final TextView tvName; //,id;
         //  private final TextView tvEmail;
         // private final ImageView ivPersonImage;
 
@@ -158,6 +159,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
             super(itemView);
 
             tvName = itemView.findViewById(R.id.aspName);
+          //  id = itemView.findViewById(R.id.ID);
             //tvEmail = itemView.findViewById(R.id.tvEmail);
             //ivPersonImage = itemView.findViewById(R.id.ivPersonImage);
             itemView.setOnClickListener(this);
@@ -167,7 +169,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.ViewHo
         public void onClick(View v) {
             StractHospital modelPerson = modelPersonList.get(getAdapterPosition());
             Intent intent = new Intent(context, FinalHospital.class);
-            intent.putExtra("Hospital",modelPerson.getHospitalName());
+            intent.putExtra("Hospital",modelPerson.getState());
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
             Toast.makeText(context, modelPerson.getHospitalName(), Toast.LENGTH_SHORT).show();

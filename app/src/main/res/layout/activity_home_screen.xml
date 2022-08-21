@@ -36,23 +36,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="119dp"
-            android:layout_height="62dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="56dp"
-            android:backgroundTint="#ff5258"
-            android:padding="15dp"
-            android:text="@string/logout"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcome"
-            app:layout_constraintVertical_bias="0.848"
-            tools:ignore="DuplicateSpeakableTextCheck" />
 
 
         <Button
@@ -221,3 +204,20 @@
 </androidx.drawerlayout.widget.DrawerLayout>
 <!--            android:src="@drawable/ic_baseline_qr_code_scanner_24"-->
 <!--            android:src="@drawable/ic_baseline_grading_24"-->
+<!--        <Button-->
+<!--            android:id="@+id/logout"-->
+<!--            android:layout_width="119dp"-->
+<!--            android:layout_height="62dp"-->
+<!--            android:layout_marginStart="56dp"-->
+<!--            android:layout_marginTop="80dp"-->
+<!--            android:layout_marginEnd="56dp"-->
+<!--            android:backgroundTint="#ff5258"-->
+<!--            android:padding="15dp"-->
+<!--            android:text="@string/logout"-->
+<!--            android:textSize="15sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/welcome"-->
+<!--            app:layout_constraintVertical_bias="0.848"-->
+<!--            tools:ignore="DuplicateSpeakableTextCheck" />-->

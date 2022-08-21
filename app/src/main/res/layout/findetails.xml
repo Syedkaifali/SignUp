@@ -250,17 +250,26 @@
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
         </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:text="Location on Google Map"
-            android:clickable="true"
-            android:backgroundTint="@color/gray"
-            android:backgroundTintMode="add"
-            android:elevation="10dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/LONGITUDE"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/LATITUDE"/>
 
     </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:text="Location on Google Map"-->
+<!--            android:clickable="true"-->
+<!--            android:id="@+id/BUTS"-->
+<!--            android:backgroundTint="@color/gray"-->
+<!--            android:backgroundTintMode="add"-->
+<!--            android:elevation="10dp"/>-->

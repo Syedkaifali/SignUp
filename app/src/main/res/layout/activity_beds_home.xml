@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".beds_home">
     <include
-        android:id="@+id/search_toolbar"
+        android:id="@+id/search_toolbarB"
         layout="@layout/search_toolbar" />
 
     <androidx.recyclerview.widget.RecyclerView

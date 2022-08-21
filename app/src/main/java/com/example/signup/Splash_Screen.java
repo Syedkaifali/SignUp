@@ -32,7 +32,7 @@ public class Splash_Screen extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(Splash_Screen.this,MainActivity.class));
             }
-        },6000);
+        },5000);
 
     }
 }

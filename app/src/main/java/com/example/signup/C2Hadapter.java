@@ -106,7 +106,7 @@ public class C2Hadapter extends RecyclerView.Adapter<com.example.signup.C2Hadapt
         public void onClick(View v) {
             C2HM modelPerson = modelPersonList.get(getAdapterPosition());
         Intent intent = new Intent(context,FinalHospital.class);
-        intent.putExtra("Hospital",modelPerson.getHosc());
+        intent.putExtra("Hospital",modelPerson.getId());
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
             Toast.makeText(context, modelPerson.getHosc(), Toast.LENGTH_SHORT).show();
