@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -40,6 +43,8 @@ dependencies {
     implementation 'com.karumi:dexter:6.2.2'
     implementation 'com.airbnb.android:lottie:5.2.0'
     implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.1'
+    implementation 'androidx.navigation:navigation-fragment:2.5.1'
+    implementation 'androidx.navigation:navigation-ui:2.5.1'
 
     //implementation problem 
 //    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'

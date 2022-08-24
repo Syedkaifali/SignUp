@@ -21,6 +21,9 @@
             android:name=".OxygenActivity"
             android:exported="false" />
         <activity
+            android:name=".SugarActivity"
+            android:exported="false" />
+        <activity
             android:name=".KHOON"
             android:exported="false" />
         <activity
