@@ -46,8 +46,7 @@
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_state_on.xml" value="0.2015625" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_states.xml" value="0.2" />
-        <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_sugar.xml" value="0.152" />
-        <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_sugar2.xml" value="0.191015625" />
+        <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_sugar.xml" value="0.15625" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_upd.xml" value="0.176" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_upload.xml" value="0.2" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/layout/activity_upload_pg.xml" value="0.17432432432432432" />
@@ -74,8 +73,12 @@
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/mipmap-anydpi-v26/ic_launcherr.xml" value="0.2365" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/mipmap-anydpi-v26/ic_launcherr_round.xml" value="0.2365" />
         <entry key="app/src/main/res/layout/activity_bp.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_khoon.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_oxy.xml" value="0.16317567567567567" />
+        <entry key="app/src/main/res/layout/activity_oxygen.xml" value="0.16317567567567567" />
         <entry key="app/src/main/res/layout/activity_vitals.xml" value="0.16317567567567567" />
+        <entry key="app/src/main/res/layout/khoonitem.xml" value="0.16153846153846155" />
+        <entry key="app/src/main/res/layout/oxyitem.xml" value="0.1625" />
       </map>
     </option>
   </component>

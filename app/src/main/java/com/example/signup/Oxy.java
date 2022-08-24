@@ -58,7 +58,7 @@ public class Oxy extends AppCompatActivity {
         String id = databaseUsers.push().getKey();
 
         USEROXY user = new USEROXY( userdate, userOxy, usernote);
-        databaseUsers.child("userO").child(id).setValue(user)
+        databaseUsers.child("OXY").child(id).setValue(user)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
