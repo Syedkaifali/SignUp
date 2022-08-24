@@ -18,6 +18,9 @@
         android:theme="@style/Theme.SignUp"
         tools:targetApi="31">
         <activity
+            android:name=".OxygenActivity"
+            android:exported="false" />
+        <activity
             android:name=".KHOON"
             android:exported="false" />
         <activity

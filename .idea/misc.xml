@@ -72,6 +72,9 @@
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2365" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/mipmap-anydpi-v26/ic_launcherr.xml" value="0.2365" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/mipmap-anydpi-v26/ic_launcherr_round.xml" value="0.2365" />
+        <entry key="app/src/main/res/layout/activity_bp.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_oxy.xml" value="0.16317567567567567" />
+        <entry key="app/src/main/res/layout/activity_vitals.xml" value="0.16317567567567567" />
       </map>
     </option>
   </component>
