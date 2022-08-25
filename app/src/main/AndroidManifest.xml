@@ -42,7 +42,7 @@
             android:name=".yeeeeeeeeeeeeeeeeeeeeeeeee"
             android:exported="false" />
         <activity
-            android:name=".adddaata"
+            android:name=".adddcaata"
             android:exported="false" />
         <activity
             android:name=".Splash_Screen"
