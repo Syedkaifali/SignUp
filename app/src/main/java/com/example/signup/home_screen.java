@@ -86,12 +86,12 @@ private FirebaseAuth mFirebaseAuth;
     }
 
     private void openMeds_Home(){
-        Intent intent = new Intent(this, meds_home.class);
+        Intent intent = new Intent(this, meds_home.class);  //meds_home
         startActivity(intent);
     }
 
     private void openHistory() {
-        Intent intent = new Intent(this, Vitals.class);
+        Intent intent = new Intent(this, Vitals.class); // Vitals
         startActivity(intent);
     }
 

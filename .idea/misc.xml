@@ -72,13 +72,17 @@
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2365" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/mipmap-anydpi-v26/ic_launcherr.xml" value="0.2365" />
         <entry key="..\:/Users/syed kaif/Desktop/SignUp/app/src/main/res/mipmap-anydpi-v26/ic_launcherr_round.xml" value="0.2365" />
+        <entry key="app/src/main/res/layout/activity_beds_home.xml" value="0.16317567567567567" />
+        <entry key="app/src/main/res/layout/activity_blank_beds.xml" value="0.1543918918918919" />
         <entry key="app/src/main/res/layout/activity_bp.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_khoon.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_oxy.xml" value="0.16317567567567567" />
         <entry key="app/src/main/res/layout/activity_oxygen.xml" value="0.16317567567567567" />
         <entry key="app/src/main/res/layout/activity_vitals.xml" value="0.16317567567567567" />
         <entry key="app/src/main/res/layout/khoonitem.xml" value="0.16153846153846155" />
         <entry key="app/src/main/res/layout/oxyitem.xml" value="0.1625" />
+        <entry key="app/src/main/res/menu/search_menu.xml" value="0.16317567567567567" />
       </map>
     </option>
   </component>
