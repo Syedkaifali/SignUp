@@ -36,8 +36,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-
-
         <Button
             android:id="@+id/scan_button"
             android:layout_width="269dp"
@@ -50,7 +48,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.804" />
+            app:layout_constraintVertical_bias="0.929" />
 
         <ImageButton
             android:id="@+id/beds"
@@ -161,12 +159,12 @@
             android:clickable="true"
             android:text="Upload Report"
             android:textSize="15sp"
-            app:layout_constraintBottom_toTopOf="@+id/scan_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.774"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/upload_reports"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.059" />
 
         <TextView
             android:id="@+id/welcome"
@@ -183,6 +181,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.147" />
+
+        <Button
+            android:id="@+id/BUTS"
+            android:layout_width="242dp"
+            android:layout_height="83dp"
+            android:backgroundTint="#CE062F6A"
+            android:text="nearby hospitals "
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.791" />
 
         <TextView
             android:id="@+id/textView2"
