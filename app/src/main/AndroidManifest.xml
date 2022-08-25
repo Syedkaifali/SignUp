@@ -18,12 +18,6 @@
         android:theme="@style/Theme.SignUp"
         tools:targetApi="31">
         <activity
-            android:name=".blank_beds"
-            android:exported="false" />
-        <activity
-            android:name=".blank_vitals"
-            android:exported="false" />
-        <activity
             android:name=".OxygenActivity"
             android:exported="false" />
         <activity
