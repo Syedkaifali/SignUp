@@ -127,6 +127,10 @@ private FirebaseAuth mFirebaseAuth;
                 mFirebaseAuth.signOut();
                 Intent intent2 = new Intent(this, MainActivity.class);
                 startActivity(intent2);
+            case R.id.Complain:
+                mFirebaseAuth.signOut();
+                Intent intent3 = new Intent(this, Complain.class);
+                startActivity(intent3);
         }
         return true;
     }

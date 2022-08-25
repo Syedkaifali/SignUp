@@ -57,7 +57,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+//                    Intent intent= new Intent(MyAdapter.this,Fullscreenimage.class);
+//                    intent.putExtra("image_url",current.flagimage);
+//                    context.startActivity(intent);
                 }
             });
         }

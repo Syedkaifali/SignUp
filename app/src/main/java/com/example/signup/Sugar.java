@@ -56,7 +56,7 @@ public class Sugar extends AppCompatActivity {
         String id = databaseUsers.push().getKey();
 
         USERSUGAR user = new USERSUGAR( userdate, usersugar, usernote);
-        databaseUsers.child("userS").child(id).setValue(user)
+        databaseUsers.child("USER_S").child(id).setValue(user)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

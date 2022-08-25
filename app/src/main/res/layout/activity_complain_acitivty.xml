@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SugarActivity"
-    android:background="#8DEFFBEC">
+    tools:context=".ComplainAcitivty">
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sugar_list"
+        android:id="@+id/complain_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

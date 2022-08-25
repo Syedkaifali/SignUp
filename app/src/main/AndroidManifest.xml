@@ -18,6 +18,18 @@
         android:theme="@style/Theme.SignUp"
         tools:targetApi="31">
         <activity
+            android:name=".STATUS"
+            android:exported="false" />
+        <activity
+            android:name=".ComplainAcitivty"
+            android:exported="false" />
+        <activity
+            android:name=".Complain"
+            android:exported="false" />
+        <activity
+            android:name=".Fullscreenimage"
+            android:exported="false" />
+        <activity
             android:name=".OxygenActivity"
             android:exported="false" />
         <activity
@@ -42,7 +54,7 @@
             android:name=".yeeeeeeeeeeeeeeeeeeeeeeeee"
             android:exported="false" />
         <activity
-            android:name=".adddaata"
+            android:name=".adddcaata"
             android:exported="false" />
         <activity
             android:name=".Splash_Screen"

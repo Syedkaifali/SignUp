@@ -15,31 +15,31 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class SugarActivity extends AppCompatActivity {
+public class ComplainAcitivty extends AppCompatActivity {
+
     RecyclerView recyclerView;
     DatabaseReference database;
-    SUGARADAPTER sugaradapter;
-    ArrayList<SUGARUSER> list;
-
+    ComplainAdapter complainAdapter;
+    ArrayList<UserComplain> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sugar2);
-        recyclerView = findViewById(R.id.sugar_list);
+        setContentView(R.layout.activity_complain_acitivty);
+        recyclerView = findViewById(R.id.complain_list);
         recyclerView.setHasFixedSize(true);
-        database = FirebaseDatabase.getInstance().getReference("USER_S");
+        database = FirebaseDatabase.getInstance().getReference("Complain");
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list =new ArrayList<>();
-        sugaradapter = new SUGARADAPTER(this,list);
-        recyclerView.setAdapter(sugaradapter);
+        complainAdapter = new ComplainAdapter(this,list);
+        recyclerView.setAdapter(complainAdapter);
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
-                    SUGARUSER user = dataSnapshot.getValue(SUGARUSER.class);
+                    UserComplain user = dataSnapshot.getValue(UserComplain.class);
                     list.add(user);
                 }
-                sugaradapter.notifyDataSetChanged();
+                complainAdapter.notifyDataSetChanged();
             }
 
             @Override

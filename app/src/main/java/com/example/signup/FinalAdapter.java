@@ -121,6 +121,12 @@ public class FinalAdapter extends RecyclerView.Adapter<com.example.signup.FinalA
             Longitude = itemView.findViewById(R.id.LONGITUDE);
             Latitude = itemView.findViewById(R.id.LATITUDE);
             Mobile = itemView.findViewById(R.id.MOBILENUMBER);
+
+
+
+
+
+
            // Button  button= itemView.findViewById(R.id.BUTS);
 //            button.setOnClickListener(new View.OnClickListener() {
 //                @Override
