@@ -80,6 +80,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_oxy.xml" value="0.16317567567567567" />
         <entry key="app/src/main/res/layout/activity_oxygen.xml" value="0.16317567567567567" />
+        <entry key="app/src/main/res/layout/activity_sos.xml" value="0.16317567567567567" />
         <entry key="app/src/main/res/layout/activity_vitals.xml" value="0.16317567567567567" />
         <entry key="app/src/main/res/layout/khoonitem.xml" value="0.16153846153846155" />
         <entry key="app/src/main/res/layout/oxyitem.xml" value="0.1625" />
