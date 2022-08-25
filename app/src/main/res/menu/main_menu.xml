@@ -14,7 +14,7 @@
 
         <item
             android:id="@+id/nav_scan"
-            android:title="doctors"
+            android:title="Doctors"
             android:icon="@drawable/qrcode"/>
 
         <item
@@ -22,6 +22,10 @@
             android:title="Beds"
             android:icon="@drawable/hospitalbed"/>
 
+        <item
+            android:id="@+id/Complain"
+            android:title="Report"
+            android:icon="@drawable/ic_baseline_home_24"/>
         <item
             android:id="@+id/nav_logout"
             android:title="@string/logout"
