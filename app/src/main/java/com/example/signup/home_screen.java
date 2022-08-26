@@ -95,11 +95,12 @@ private FirebaseAuth mFirebaseAuth;
     }
 
     public void BtnSetEmergency_onClick(View V){
-        String number ="+919926885790";
+        String number ="+9926885790";
         Intent intentcall = new Intent( Intent.ACTION_CALL);
         intentcall.setData(Uri.parse("tel:"+ number));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED);
         startActivity(intentcall);
+
     }
 
 
