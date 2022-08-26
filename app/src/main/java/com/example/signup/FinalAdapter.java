@@ -1,6 +1,9 @@
 package com.example.signup;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +54,7 @@ public class FinalAdapter extends RecyclerView.Adapter<com.example.signup.FinalA
         holder.HospitalType.setText(modelPerson.getHospitalType());
         holder.Longitude.setText(modelPerson.getLongitude());
         holder.Latitude.setText(modelPerson.getLatitude());
-  //   holder.IMGTEXT.setText(modelPerson.getHospitalName());
+        //   holder.IMGTEXT.setText(modelPerson.getHospitalName());
     }
 
     @Override
@@ -59,50 +62,9 @@ public class FinalAdapter extends RecyclerView.Adapter<com.example.signup.FinalA
         return modelPersonList.size();
     }
 
-//@Override
-//public Filter getFilter() {
-//        return filter;
-//        }
-//
-//private Filter filter = new Filter() {
-//
-//// runs on background thread
-//
-//@Override
-//protected FilterResults performFiltering(CharSequence constraint) {
-//
-//
-//        List<StractFinal> filteredList = new ArrayList<>();
-//
-//        if (constraint == null || constraint.length() == 0) {
-//        filteredList.addAll(doctorsListAll);
-//        } else {
-//        String filterPattern = constraint.toString().toLowerCase().trim();
-//
-//        for (StractFinal item : doctorsListAll) {
-//        if (item.getHosc().toLowerCase().contains(filterPattern)) {
-//        filteredList.add(item);
-//        }
-//        }
-//        }
-//        FilterResults results = new FilterResults();
-//        results.values = filteredList;
-//
-//        return results;
-//        }
-//
-//// runs on ui thread
-//@Override
-//protected void publishResults(CharSequence constraints, FilterResults results) {
-//        modelPersonList.clear();
-//        modelPersonList.addAll((List) results.values);
-//        notifyDataSetChanged();
-//        }
-//        };
-
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private final TextView HospitalName, Mobile, Address, City, Pincode, States, Telephone, Website, Email, Speciality, HospitalType ,Longitude,Latitude;
+        private final TextView HospitalName, Mobile, Address, City, Pincode, States, Telephone, Website, Email, Speciality, HospitalType, Longitude, Latitude;
         Button button;
 
         public ViewHolder(@NonNull View itemView) {
@@ -123,23 +85,19 @@ public class FinalAdapter extends RecyclerView.Adapter<com.example.signup.FinalA
             Mobile = itemView.findViewById(R.id.MOBILENUMBER);
 
 
-
-
-
-
-           // Button  button= itemView.findViewById(R.id.BUTS);
-//            button.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    if (Longitude().equalsIgnoreCase("NA") || (Activity_HospitalDetails.this.o.b().equalsIgnoreCase("Null") && Activity_HospitalDetails.this.o.c().equalsIgnoreCase("NA")) || Activity_HospitalDetails.this.o.c().equalsIgnoreCase("Null")) {
-//                        Toast.makeText(Activity_HospitalDetails.this.ab, "No place found", 0).show();
-//                        return;
-//                    }
-//                    Intent intent = new Intent("android.intent.action.VIEW", Uri.parse("http://maps.google.com/maps?saddr=" + Activity_HospitalDetails.this.Z + "," + Activity_HospitalDetails.this.aa + "&daddr=" + Activity_HospitalDetails.this.o.b() + "," + Activity_HospitalDetails.this.o.c()));
-//                    intent.putExtra("Location", parseInt);
-//                    Activity_HospitalDetails.this.startActivity(intent);
-//                }
-//            });
+            Button button = itemView.findViewById(R.id.BUTS);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String location = "geo:0, 0?q=" + HospitalName.getText().toString() + "," + Address.getText().toString() + "," + City.getText().toString() + "," + Pincode.getText().toString();
+                    Toast.makeText(context, location, Toast.LENGTH_SHORT).show();
+                    Log.d("MAPS", location);
+                    Uri uri = Uri.parse(location);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    intent.setPackage("com.google.android.apps.maps");
+                    context.startActivity(intent);
+                }
+            });
             itemView.setOnClickListener(this);
         }
 
