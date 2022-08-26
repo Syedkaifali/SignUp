@@ -43,19 +43,17 @@ public class bedsAdapter extends RecyclerView.Adapter<bedsAdapter.ExampleViewHol
         String state = currentItem.getState();
         int ruralHospital = currentItem.getRuralHospital();
         int ruralBed = currentItem.getRuralBed();
-        int urbanHospital = currentItem.getUrbanHospital();
+        String urbanHospital = currentItem.getUrbanHospital();
         int urbanBed = currentItem.getUrbanBed();
         int totalHospital = currentItem.getTotalHospital();
-        int totalBed = currentItem.getTotalBed();
 
-        holder.mTextViewStates.setText("State : " + state);
+        holder.mTextViewStates.setText("Hospital name : " + state);
 
-        holder.mTextViewRuralHospital.setText("Rural Hospital : " + String.valueOf(ruralHospital));
-        holder.mTextViewRuralBed.setText("Rural Bed : " + String.valueOf(ruralBed));
-        holder.mTextViewUrbanHospital.setText("Urban Hospital : " + String.valueOf(urbanHospital));
-        holder.mTextViewUrbanBed.setText("Urban Bed : " + String.valueOf(urbanBed));
-        holder.mTextViewTotalBed.setText("Total Bed : " + String.valueOf(totalBed));
-        holder.mTextViewTotalHospital.setText("Total Hospital : " + String.valueOf(totalHospital));
+        holder.mTextViewRuralHospital.setText("Number of beds : " + ruralHospital);
+        holder.mTextViewRuralBed.setText("BEds available : " + ruralBed);
+        holder.mTextViewUrbanHospital.setText("Rating  : " + urbanHospital);
+        holder.mTextViewUrbanBed.setText("hospital price  : " + urbanBed);
+        holder.mTextViewTotalHospital.setText("Government hospital price : " + totalHospital);
 
 
     }
@@ -121,7 +119,7 @@ public class bedsAdapter extends RecyclerView.Adapter<bedsAdapter.ExampleViewHol
             mTextViewUrbanHospital = itemView.findViewById(R.id.urabn_hospital_name);
             mTextViewUrbanBed = itemView.findViewById(R.id.urban_bed_name);
             mTextViewTotalHospital = itemView.findViewById(R.id.total_hospital_name);
-            mTextViewTotalBed = itemView.findViewById(R.id.total_bed_name);
+//            mTextViewTotalBed = itemView.findViewById(R.id.total_bed_name);
         }
     }
 }

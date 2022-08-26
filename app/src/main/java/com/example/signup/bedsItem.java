@@ -5,19 +5,17 @@ public class bedsItem {
     private String mState;
     private int mRuralHospital;
     private int mRuralBed;
-    private int mUrbanHospital;
+    private String mUrbanHospital;
     private int mUrbanBed;
     private int mTotalHospital;
-    private int mTotalBed;
 
-    public bedsItem(String state, int ruralHospital, int ruralBed, int urbanHospital, int urbanBed, int totalHospital, int totalBed){
+    public bedsItem(String state, int ruralHospital, int ruralBed, String urbanHospital, int urbanBed, int totalHospital){
         mState = state;
         mRuralHospital = ruralHospital;
         mRuralBed = ruralBed;
         mUrbanHospital = urbanHospital;
         mUrbanBed = urbanBed;
         mTotalHospital = totalHospital;
-        mTotalBed = totalBed;
     }
 
     public String getState(){
@@ -32,7 +30,7 @@ public class bedsItem {
         return mRuralBed;
     }
 
-    public int getUrbanHospital(){
+    public String getUrbanHospital(){
         return mUrbanHospital;
     }
 
@@ -44,7 +42,4 @@ public class bedsItem {
         return mTotalHospital;
     }
 
-    public int getTotalBed(){
-        return mTotalBed;
-    }
 }

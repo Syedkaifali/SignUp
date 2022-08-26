@@ -51,15 +51,15 @@ public class beds_home extends AppCompatActivity {
     }
 
     private void parseJSON() {
-        String url = "https://api.rootnet.in/covid19-in/hospitals/beds";
+        String url = "https://script.google.com/macros/s/AKfycbyubWCEQ2YdtZBB7S2zG58WyeYlHWZUFRne2nYGfqVfgMj97W85A8iApvqZC-krUMXu/exec";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONObject data = response.getJSONObject("data");
-                            JSONArray jsonArray = data.getJSONArray("regional");
+//                            JSONObject data = response.getJSONObject("data");
+                            JSONArray jsonArray = response.getJSONArray("data");
 
 
                             for (int i = 0; i < jsonArray.length(); i++) {
@@ -68,12 +68,11 @@ public class beds_home extends AppCompatActivity {
                                 String stateName = regionals.getString("state");
                                 int ruralHospitals = regionals.getInt("ruralHospitals");
                                 int ruralBeds = regionals.getInt("ruralBeds");
-                                int urbanHospitals = regionals.getInt("urbanHospitals");
+                                String urbanHospitals = regionals.getString("urbanHospitals");
                                 int urbanBeds = regionals.getInt("urbanBeds");
                                 int totalHospitals = regionals.getInt("totalHospitals");
-                                int totalBeds = regionals.getInt("totalBeds");
 
-                                mExampleList.add(new bedsItem(stateName, ruralHospitals, ruralBeds, urbanBeds, urbanHospitals, totalHospitals, totalBeds));
+                                mExampleList.add(new bedsItem(stateName, ruralHospitals, ruralBeds,urbanHospitals, urbanBeds,  totalHospitals));
                             }
 
                             mBedsAdapter = new bedsAdapter(beds_home.this, mExampleList);
