@@ -23,7 +23,7 @@ public class Vitals extends AppCompatActivity {
     }
 
     private void openOther() {
-        Intent intent = new Intent(this, Other.class);
+        Intent intent = new Intent(this, upd.class);
         startActivity(intent);
     }
 

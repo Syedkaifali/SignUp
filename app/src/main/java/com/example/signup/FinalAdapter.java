@@ -43,7 +43,7 @@ public class FinalAdapter extends RecyclerView.Adapter<com.example.signup.FinalA
         StractFinal modelPerson = modelPersonList.get(position);
         holder.HospitalName.setText(modelPerson.getHospitalName());
         holder.Address.setText(modelPerson.getAddress());
-        holder.Telephone.setText(modelPerson.getTelephone());
+        //holder.Telephone.setText(modelPerson.getTelephone());
         holder.City.setText(modelPerson.getCity());
         holder.Pincode.setText(modelPerson.getPincode());
         holder.States.setText(modelPerson.getStates());
@@ -51,7 +51,7 @@ public class FinalAdapter extends RecyclerView.Adapter<com.example.signup.FinalA
         holder.Mobile.setText(modelPerson.getMobile());
         holder.Email.setText(modelPerson.getEmail());
         holder.Speciality.setText(modelPerson.getSpeciality());
-        holder.HospitalType.setText(modelPerson.getHospitalType());
+      //  holder.HospitalType.setText(modelPerson.getHospitalType());
         holder.Longitude.setText(modelPerson.getLongitude());
         holder.Latitude.setText(modelPerson.getLatitude());
         //   holder.IMGTEXT.setText(modelPerson.getHospitalName());
@@ -64,7 +64,7 @@ public class FinalAdapter extends RecyclerView.Adapter<com.example.signup.FinalA
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private final TextView HospitalName, Mobile, Address, City, Pincode, States, Telephone, Website, Email, Speciality, HospitalType, Longitude, Latitude;
+        private final TextView HospitalName, Mobile, Address, City, Pincode, States,  Website, Email, Speciality,  Longitude, Latitude;
         Button button;
 
         public ViewHolder(@NonNull View itemView) {
@@ -75,11 +75,11 @@ public class FinalAdapter extends RecyclerView.Adapter<com.example.signup.FinalA
             City = itemView.findViewById(R.id.CITY);
             Pincode = itemView.findViewById(R.id.PINCODE);
             States = itemView.findViewById(R.id.STATE);
-            Telephone = itemView.findViewById(R.id.TELEPHONE);
+          //  Telephone = itemView.findViewById(R.id.TELEPHONE);
             Website = itemView.findViewById(R.id.WEBSITE);
             Email = itemView.findViewById(R.id.EMAIL);
             Speciality = itemView.findViewById(R.id.SPECIALITY);
-            HospitalType = itemView.findViewById(R.id.TYPE);
+          //  HospitalType = itemView.findViewById(R.id.TYPE);
             Longitude = itemView.findViewById(R.id.LONGITUDE);
             Latitude = itemView.findViewById(R.id.LATITUDE);
             Mobile = itemView.findViewById(R.id.MOBILENUMBER);

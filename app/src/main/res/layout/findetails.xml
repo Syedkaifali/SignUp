@@ -154,27 +154,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Telephone : "
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/TELEPHONE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="telephone"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-        </LinearLayout>
-   <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Website : "
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
@@ -229,6 +208,15 @@
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/LONGITUDE"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/LATITUDE"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -238,15 +226,59 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hospital Type : "
+                android:text="Beds Avaliable : "
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/TYPE"
+                android:id="@+id/BEDS_AVL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="hospital type"
+                android:text="60"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bed Price : "
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/BED_PRICE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 550"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Government Price : "
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/GOVERN_PRICE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 330"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -269,26 +301,9 @@
                 android:text="Location on Google Map" />
 
         </LinearLayout>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/LONGITUDE"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/LATITUDE"/>
 
     </LinearLayout>
 
 
+
 </androidx.cardview.widget.CardView>
-<!--        <Button-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:text="Location on Google Map"-->
-<!--            android:clickable="true"-->
-<!--            android:id="@+id/BUTS"-->
-<!--            android:backgroundTint="@color/gray"-->
-<!--            android:backgroundTintMode="add"-->
-<!--            android:elevation="10dp"/>-->
