@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -94,17 +93,6 @@ private FirebaseAuth mFirebaseAuth;
         });
     }
 
-    public void BtnSetEmergency_onClick(View V){
-        String number ="+9926885790";
-        Intent intentcall = new Intent( Intent.ACTION_CALL);
-        intentcall.setData(Uri.parse("tel:"+ number));
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED);
-        startActivity(intentcall);
-
-    }
-
-
-
     private void openHospital() {
         Intent intent = new Intent(this, Hhomescreen.class);
         startActivity(intent);
@@ -124,6 +112,14 @@ private FirebaseAuth mFirebaseAuth;
     private void openMeds_Home(){
         Intent intent = new Intent(this, meds_home.class);  //meds_home
         startActivity(intent);
+    }
+    public void BtnSetEmergency_onClick(View V){
+        String number ="+919926885790";
+        Intent intentcall = new Intent( Intent.ACTION_CALL);
+        intentcall.setData(Uri.parse("tel:"+ number));
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED);
+        startActivity(intentcall);
+
     }
 
     private void openHistory() {
@@ -164,9 +160,11 @@ private FirebaseAuth mFirebaseAuth;
                 Intent intent2 = new Intent(this, MainActivity.class);
                 startActivity(intent2);
             case R.id.Complain:
-                mFirebaseAuth.signOut();
                 Intent intent3 = new Intent(this, Complain.class);
                 startActivity(intent3);
+            case R.id.cowin:
+                Intent intent4 = new Intent(this, vaccination.class);
+                startActivity(intent4);
         }
         return true;
     }
